@@ -5,6 +5,7 @@
  */
 package com.udea.logica;
 
+import com.udea.modelo.Customer;
 import com.udea.modelo.DiscountCode;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -34,5 +35,8 @@ public class DiscountManager {
     public List<DiscountCode> getDiscountCodes() {
         Query query = em.createNamedQuery("DiscountCode.findAll");
         return query.getResultList();
+    }
+     public DiscountCode update(DiscountCode discountCode) {
+        return em.merge(discountCode);
     }
 }

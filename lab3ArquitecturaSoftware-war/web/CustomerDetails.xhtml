@@ -37,7 +37,7 @@
                     <p:outputLabel value="DiscountCode:" for="discountCode" />
                     <p:selectOneMenu id="discountCode" value="#{customerMBean.details.discountCode}" required="true" requiredMessage="The DiscountCode field is required.">
                         <!-- TODO: update below reference to list of available items-->
-                        <f:selectItems value="#{fixme}"/>
+                        <f:selectItems value="#{discountCodeMBean.customers}"/>
                     </p:selectOneMenu>
                     <p:outputLabel value="Zip:" for="zip" />
                     <p:selectOneMenu id="zip" value="#{customerMBean.details.zip}" required="true" requiredMessage="The Zip field is required.">
